@@ -37,4 +37,5 @@ return [
         ->serializeToForum('AltAttr', 'justoverclock-dontgoaway.AltAttr'),
     (new Extend\Settings)
         ->serializeToForum('ModalBtn', 'justoverclock-dontgoaway.ModalBtn'),
+    (new Extend\Settings())->serializeToForum('EnableExtLink', 'justoverclock-dontgoaway.enable.extlink', 'boolval', false),
 ];

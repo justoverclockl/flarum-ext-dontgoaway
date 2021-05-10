@@ -61,4 +61,9 @@ app.initializers.add('justoverclock/flarum-ext-dontgoaway', () => {
     label: app.translator.trans('flarum-ext-dontgoaway.admin.btn'),
     help: app.translator.trans('flarum-ext-dontgoaway.admin.btndesc'),
   });
+  app.extensionData.for('justoverclock-dontgoaway').registerSetting({
+    setting: 'justoverclock-dontgoaway.enable.extlink',
+    label: app.translator.trans('flarum-ext-dontgoaway.admin.enableExtLink'),
+    type: 'boolean',
+  });
 });

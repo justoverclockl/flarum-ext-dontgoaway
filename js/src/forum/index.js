@@ -10,8 +10,10 @@
 
 import { extend } from 'flarum/extend';
 import Page from 'flarum/components/Page';
+import PostStream from 'flarum/components/PostStream';
 import app from 'flarum/app';
 import Swal from 'sweetalert2';
+
 
 app.initializers.add('justoverclock/flarum-ext-dontgoaway', () => {
   extend(Page.prototype, 'oncreate', function () {
@@ -51,4 +53,40 @@ app.initializers.add('justoverclock/flarum-ext-dontgoaway', () => {
       });
     });
   });
+});
+extend(PostStream.prototype, 'oncreate', function () {
+  if (app.forum.attribute('EnableExtLink') === true)
+  jQuery('a')
+    .filter(function () {
+      return this.hostname && this.hostname !== location.hostname;
+    })
+    .click(function (e) {
+      e.preventDefault();
+
+      // Variabili per le traduzioni
+      const ExtLinkTitle = app.translator.trans('flarum-ext-dontgoaway.forum.extlinktitle');
+      const ExtLinkText = app.translator.trans('flarum-ext-dontgoaway.forum.extlinktext');
+      const ConfButton = app.translator.trans('flarum-ext-dontgoaway.forum.confbutton');
+      const CancButton = app.translator.trans('flarum-ext-dontgoaway.forum.cancelbutton');
+      // Se la posizione corrente è differente dal nostro dominio
+      // vuol dire che si tratta di link esterno
+      if (this.hostname !== location.hostname)
+        return Swal.fire({
+          title: ExtLinkTitle,
+          text: ExtLinkText,
+          icon: 'question',
+          footer: this.href,
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: ConfButton,
+          cancelButtonText: CancButton
+        }).then((result) => {
+          // Se confermiamo premendo il pulsante apriamo il link
+          // Altrimenti rimaniamo nella stessa posizione
+          if (result.isConfirmed) {
+            window.location = this.href;
+          }
+        });
+    });
 });
