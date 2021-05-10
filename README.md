@@ -1,7 +1,7 @@
 ![ezgif-7-9054ec048664](https://user-images.githubusercontent.com/79002016/117632492-78c2e900-b17d-11eb-884d-be9106485e5f.gif)
 # Dontgoaway
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-dontgoaway.svg)](https://packagist.org/packages/justoverclock/flarum-ext-dontgoaway) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-dontgoaway.svg)](https://packagist.org/packages/justoverclock/flarum-ext-dontgoaway)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://poser.pugx.org/justoverclock/flarum-ext-dontgoaway/v)](//packagist.org/packages/justoverclock/flarum-ext-dontgoaway) [![Total Downloads](https://poser.pugx.org/justoverclock/flarum-ext-dontgoaway/downloads)](//packagist.org/packages/justoverclock/flarum-ext-dontgoaway)
 
 A [Flarum](http://flarum.org) extension. Show a Popup if a guest try to leave your site
 
