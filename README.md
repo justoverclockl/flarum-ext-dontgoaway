@@ -3,7 +3,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-dontgoaway.svg)](https://packagist.org/packages/justoverclock/flarum-ext-dontgoaway) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-dontgoaway.svg)](https://packagist.org/packages/justoverclock/flarum-ext-dontgoaway)
 
-A [Flarum](http://flarum.org) extension. Show a Popup if an user try to leave your site
+A [Flarum](http://flarum.org) extension. Show a Popup if a guest try to leave your site
 
 Function available:
  - The Exit Int popup will be showed only for guest
