@@ -23,14 +23,13 @@ Function available:
 Install with composer:
 
 ```sh
-composer require justoverclock/flarum-ext-dontgoaway:"*"
+composer require justoverclock/flarum-ext-dontgoaway
 ```
 
 ### Updating
 
 ```sh
-composer update justoverclock/flarum-ext-dontgoaway:"*"
-php flarum migrate
+composer update justoverclock/flarum-ext-dontgoaway
 php flarum cache:clear
 ```
 
